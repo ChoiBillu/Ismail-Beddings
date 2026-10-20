@@ -10,19 +10,19 @@
 
 const categories = [
   { id: "cotton-bedsheets", title: "Cotton Bedsheets",      icon: "layers",     blurb: "Breathable combed cotton in crisp percale and silky sateen." },
-  { id: "silk-polycotton",  title: "Silk Polycotton",       icon: "sparkles",   blurb: "A silky drape with the easy care and durability of a poly-cotton blend." },
+  //{ id: "silk-polycotton",  title: "Silk Polycotton",       icon: "sparkles",   blurb: "A silky drape with the easy care and durability of a poly-cotton blend." },
   { id: "duvets",           title: "Duvets & Quilt Covers", icon: "bed-double", blurb: "Quilt covers and duvet sets for every season." },
-  { id: "bridal",           title: "Bridal & Luxury",       icon: "gem",        blurb: "Embroidered and jacquard suites for the most memorable celebrations." },
-  { id: "pillows",          title: "Shams & Pillows",       icon: "square",     blurb: "Pillows, shams and cushion covers to finish the bed." }
+  //{ id: "bridal",           title: "Bridal & Luxury",       icon: "gem",        blurb: "Embroidered and jacquard suites for the most memorable celebrations." },
+  //{ id: "pillows",          title: "Shams & Pillows",       icon: "square",     blurb: "Pillows, shams and cushion covers to finish the bed." }
 ];
 
 const products = [
   {
     id: "IB-ST01",
     category: "cotton-bedsheets",
-    name: "Classic Satin Stripe Bed Sheet Set",
+    name: "Cotton Bedsheet",
     image: "WhatsApp Image 2026-10-20 at 9.02.46 PM.jpeg",
-    badges: ["500 Thread Count", "100% Combed Cotton", "Fitted / Flat"],
+    //badges: ["500 Thread Count", "100% Combed Cotton", "Fitted / Flat"],
     price: 1899,
     time: "",
     desc: "Crisp, breathable, and silky smooth hotel-stripe bedsheet complete with two matching tailored pillowcases."
@@ -30,9 +30,9 @@ const products = [
   {
     id: "IB-CP02",
     category: "cotton-bedsheets",
-    name: "Crisp Percale Plain Bed Sheet",
+    name: "Cotton Bedsheet",
     image: "WhatsApp Image 2026-10-20 at 9.02.47 PM (1).jpeg",
-    badges: ["300 Thread Count", "100% Cotton", "Flat"],
+    //badges: ["300 Thread Count", "100% Cotton", "Flat"],
     price: 1899,
     time: "",
     desc: "A cool, matte-finish everyday sheet that stays fresh through Faisalabad summers."
@@ -40,9 +40,9 @@ const products = [
   {
     id: "IB-PR03",
     category: "cotton-bedsheets",
-    name: "Printed Cotton Double Bed Sheet Set",
+    name: "Cotton Bedsheet",
     image: "WhatsApp Image 2026-10-20 at 9.02.47 PM.jpeg",
-    badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
     price: 1899,
     time: "",
     desc: "Colourfast floral and geometric prints with two matching pillowcases."
@@ -50,43 +50,14 @@ const products = [
   {
     id: "IB-ST01",
     category: "cotton-bedsheets",
-    name: "Ballay Ballay Ballay Ballay",
+    name: "Cotton Bedsheet",
     image: "WhatsApp Image 2026-10-20 at 9.02.48 PM (1).jpeg",
-    badges: ["500 Thread Count", "100% Combed Cotton", "Fitted / Flat"],
+    //badges: ["500 Thread Count", "100% Combed Cotton", "Fitted / Flat"],
     price: 1899,
     time: "",
     desc: "Crisp, breathable, and silky smooth hotel-stripe bedsheet complete with two matching tailored pillowcases."
   },
-  {
-    id: "IB-SP01",
-    category: "silk-polycotton",
-    name: "Silk Polycotton Solid Bed Sheet Set",
-    image: "",
-    badges: ["Silky Finish", "Silk Polycotton", "Fitted / Flat"],
-    price: null,
-    time: "",
-    desc: "Smooth, lustrous solid-colour set that resists creasing and washes easily."
-  },
-  {
-    id: "IB-SP02",
-    category: "silk-polycotton",
-    name: "Silk Polycotton Printed Bed Sheet Set",
-    image: "",
-    badges: ["Printed", "Silk Polycotton", "Flat"],
-    price: null,
-    time: "",
-    desc: "Rich printed designs with a soft, flowing hand-feel."
-  },
-  {
-    id: "IB-SP03",
-    category: "silk-polycotton",
-    name: "Silk Polycotton Embossed Bed Sheet",
-    image: "",
-    badges: ["Embossed", "Silk Polycotton", "Flat"],
-    price: null,
-    time: "",
-    desc: "Tone-on-tone embossed pattern for a quietly luxurious look."
-  },
+ 
   {
     id: "IB-QC04",
     category: "duvets",
@@ -117,66 +88,7 @@ const products = [
     time: "",
     desc: "Classic tone-on-tone satin stripe in a hotel-grade weave."
   },
-  {
-    id: "IB-BR01",
-    category: "bridal",
-    name: "Royal Embroidered Bridal Bed Suite",
-    image: "https://images.unsplash.com/photo-1540518614846-7ede433c4ef5?auto=format&fit=crop&w=400&q=80",
-    badges: ["8-Piece Luxury Suite", "Jacquard & Silk Blend", "Hand-Finished"],
-    price: null,
-    time: "",
-    desc: "Designed for the most memorable celebrations. Includes heavy embroidered duvet, filled comforter, sheets, and cushions."
-  },
-  {
-    id: "IB-BR02",
-    category: "bridal",
-    name: "Gold-Zari Jacquard Bridal Set",
-    image: "",
-    badges: ["Zari Work", "Jacquard", "Hand-Finished"],
-    price: null,
-    time: "",
-    desc: "Woven gold-thread motifs with matching shams and cushions."
-  },
-  {
-    id: "IB-BR03",
-    category: "bridal",
-    name: "Velvet Dowry Comforter Set",
-    image: "",
-    badges: ["Comforter Set", "Velvet", "Filled"],
-    price: null,
-    time: "",
-    desc: "A plush, filled comforter set made for gifting."
-  },
-  {
-    id: "IB-PL01",
-    category: "pillows",
-    name: "Hotel-Grade Pillow Pair",
-    image: "",
-    badges: ["Pair", "Microfibre Fill", "Cotton Casing"],
-    price: null,
-    time: "",
-    desc: "Supportive, soft fill in a cotton casing."
-  },
-  {
-    id: "IB-PL02",
-    category: "pillows",
-    name: "Embroidered Cushion Cover Set",
-    image: "",
-    badges: ["Set of 4", "Cotton", "Embroidered"],
-    price: null,
-    time: "",
-    desc: "Hand-finished cushion covers that match our bridal suites."
-  },
-  {
-    id: "IB-PL03",
-    category: "pillows",
-    name: "Piped Euro Shams",
-    image: "",
-    badges: ["Pair", "Cotton Sateen", "Contrast Piping"],
-    price: null,
-    time: "",
-    desc: "Tailored shams with contrast piping."
-  }
+ 
 ];
 
 /* ---------- SIZE GUIDE DATA (all measurements in inches) ----------

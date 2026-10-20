@@ -1,6 +1,6 @@
 /* Shared by index.html and showroom.html: Tailwind config, header, footer */
 tailwind.config={theme:{extend:{colors:{brand:{navy:'#0F1D38',navyLight:'#182B4F',gold:'#C5A869',goldHover:'#B39455',champagne:'#F6F2E9',champagneLight:'#FCFAF6',slate:'#5A6B82',cream:'#EDE6D6'}},fontFamily:{serif:['"Playfair Display"','Georgia','serif'],sans:['"Plus Jakarta Sans"','system-ui','sans-serif']}}}};
-const PHONE='9230016334724', WA='https://wa.me/'+PHONE;
+const PHONE='923216334724', WA='https://wa.me/'+PHONE;
 const COLLECTIONS=categories.map(c=>[c.id,c.title]);
 const wa=t=>WA+'?text='+encodeURIComponent(t);
 document.head.insertAdjacentHTML('beforeend','<style>.custom-shadow{box-shadow:0 16px 36px -10px rgba(15,29,56,.08)}html{scroll-behavior:smooth}</style>');

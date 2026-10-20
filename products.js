@@ -38,24 +38,144 @@ const products = [
     desc: "A cool, matte-finish everyday sheet that stays fresh through Faisalabad summers."
   },
   {
-    id: "IB-PR03",
+    id: "IB-PR01",
     category: "cotton-bedsheets",
     name: "Cotton Bedsheet",
-    image: "WhatsApp Image 2026-10-20 at 9.02.47 PM.jpeg",
+    image: "1.jpeg",
     //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
     price: 1899,
     time: "",
     desc: "Colourfast floral and geometric prints with two matching pillowcases."
   },
   {
-    id: "IB-ST01",
+    id: "IB-PR02",
     category: "cotton-bedsheets",
     name: "Cotton Bedsheet",
-    image: "WhatsApp Image 2026-10-20 at 9.02.48 PM (1).jpeg",
+    image: "2.jpeg",
     //badges: ["500 Thread Count", "100% Combed Cotton", "Fitted / Flat"],
     price: 1899,
     time: "",
     desc: "Crisp, breathable, and silky smooth hotel-stripe bedsheet complete with two matching tailored pillowcases."
+  },
+  {
+    id: "IB-PR03",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "3.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR04",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "4.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR05",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "5.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR06",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "6.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR07",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "7.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR08",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "8.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR09",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "9.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR10",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "10.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR11",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "11.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR12",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "12.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR13",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "13.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
+  },
+  {
+    id: "IB-PR14",
+    category: "cotton-bedsheets",
+    name: "Cotton Bedsheet",
+    image: "14.jpeg",
+    //badges: ["180 Thread Count", "Cotton", "Fitted / Flat"],
+    price: 1899,
+    time: "",
+    desc: "Colourfast floral and geometric prints with two matching pillowcases."
   },
  
   {
@@ -63,7 +183,7 @@ const products = [
     category: "duvets",
     name: "Pure Linen-Wash Quilt Cover",
     image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=400&q=80",
-    badges: ["All-Season Weave", "Percale", "With Corner Ties"],
+    badges: ["Out of Stock"],
     price: null,
     time: "",
     desc: "Enzyme-washed for effortless softness from night one. Features interior corner ribbons and concealed button closures."
@@ -72,8 +192,8 @@ const products = [
     id: "IB-QC05",
     category: "duvets",
     name: "Reversible Duvet Cover Set",
-    image: "",
-    badges: ["Reversible", "Cotton", "Button Closure"],
+    image: "dvt1.jpeg",
+    badges: ["Out of Stock"],
     price: null,
     time: "",
     desc: "Two looks in one: flip between a solid and a printed face."
@@ -83,7 +203,7 @@ const products = [
     category: "duvets",
     name: "Hotel-Stripe Duvet Cover",
     image: "",
-    badges: ["Hotel Stripe", "Cotton Sateen", "Zip Closure"],
+    badges: ["Out of Stock"],
     price: null,
     time: "",
     desc: "Classic tone-on-tone satin stripe in a hotel-grade weave."

@@ -18,21 +18,21 @@ const categories = [
 
 const products = [
   {
-    id: "IB-ST01",
+    id: "IB-MS01",
     category: "cotton-bedsheets",
     name: "Cotton Bedsheet",
     image: "WhatsApp Image 2026-10-20 at 9.02.46 PM.jpeg",
-    //badges: ["500 Thread Count", "100% Combed Cotton", "Fitted / Flat"],
+    badges: ["Most Selling"],
     price: 1899,
     time: "",
     desc: "Crisp, breathable, and silky smooth hotel-stripe bedsheet complete with two matching tailored pillowcases."
   },
   {
-    id: "IB-CP02",
+    id: "IB-MS02",
     category: "cotton-bedsheets",
     name: "Cotton Bedsheet",
     image: "WhatsApp Image 2026-10-20 at 9.02.47 PM (1).jpeg",
-    //badges: ["300 Thread Count", "100% Cotton", "Flat"],
+    badges: ["Most Selling"],
     price: 1899,
     time: "",
     desc: "A cool, matte-finish everyday sheet that stays fresh through Faisalabad summers."

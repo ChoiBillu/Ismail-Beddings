@@ -202,7 +202,7 @@ const products = [
     id: "IB-QC06",
     category: "duvets",
     name: "Hotel-Stripe Duvet Cover",
-    image: "",
+    image: "dvt2.jpeg",
     badges: ["Out of Stock"],
     price: null,
     time: "",

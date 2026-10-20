@@ -21,7 +21,7 @@ const products = [
     id: "IB-ST01",
     category: "cotton-bedsheets",
     name: "Classic Satin Stripe Bed Sheet Set",
-    image: "Images\WhatsApp Image 2026-10-20 at 9.02.46 PM.jpeg",
+    image: "WhatsApp Image 2026-10-20 at 9.02.46 PM.jpeg",
     badges: ["500 Thread Count", "100% Combed Cotton", "Fitted / Flat"],
     price: 1000,
     time: "",

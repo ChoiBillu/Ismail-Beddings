@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showroom & Collections | Ismail Bedding</title>
+<meta name="description" content="Browse Ismail Bedding's cotton bedsheets, silk polycotton, duvets, bridal suites and pillows, plus our bedsheet size guide.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="products.js"></script>
+<script src="site.js"></script>
+</head>
+<body data-page="showroom" class="bg-white text-brand-navy font-sans antialiased selection:bg-brand-gold selection:text-white">
+<div id="site-header"></div>
+
+<section class="bg-brand-champagneLight border-b border-brand-champagne py-14 text-center px-4">
+<span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-bold">The Showroom</span>
+<h1 class="text-4xl sm:text-5xl font-serif font-bold mt-2">Our Collections</h1>
+<p class="text-brand-slate max-w-2xl mx-auto mt-3">Every article below is made in Faisalabad. Tap WhatsApp on any item to order or ask for fabric swatches.</p></section>
+
+<!-- Sticky section menu -->
+<div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-brand-champagne"><div id="chips" class="max-w-7xl mx-auto px-4 py-3 flex gap-2 overflow-x-auto"></div></div>
+
+<main id="sections" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"></main>
+
+<section id="size-guide" class="scroll-mt-36 py-16 bg-brand-champagneLight border-t border-brand-champagne"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8"><span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-bold">Size Guide</span><h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2">Find Your Bedsheet Size</h2><p class="text-brand-slate text-sm mt-3">Pick a bed size to see piece dimensions in inches and approximate weights in grams.</p></div>
+<div class="max-w-sm mx-auto mb-8"><label for="sz" class="block text-xs font-bold uppercase tracking-widest mb-2">Select bedsheet size</label>
+<select id="sz" class="w-full px-4 py-3 rounded-md border border-brand-gold/60 bg-white text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-gold"></select>
+<p id="szNote" class="text-xs text-brand-slate mt-2 text-center"></p></div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-white rounded-xl border border-brand-champagne custom-shadow overflow-hidden"><h3 class="font-serif text-lg font-bold px-5 py-4 bg-brand-navy text-white">Dimensions <span class="text-brand-gold text-sm font-sans font-medium">(inches)</span></h3><div class="overflow-x-auto"><table id="dim" class="w-full text-sm"></table></div></div>
+<div class="bg-white rounded-xl border border-brand-champagne custom-shadow overflow-hidden"><h3 class="font-serif text-lg font-bold px-5 py-4 bg-brand-navy text-white">Weight <span class="text-brand-gold text-sm font-sans font-medium">(grams, approx.)</span></h3><div class="overflow-x-auto"><table id="wt" class="w-full text-sm"></table></div></div></div>
+<p class="text-xs text-brand-slate text-center mt-6">Dimensions are before washing; allow for about 3–5% shrinkage. Weights are estimates (±5%) by fabric weight. Ask us for custom sizes.</p>
+</div></section>
+
+<div id="site-footer"></div>
+<script>
+const e=s=>document.getElementById(s);
+const money=p=>p==null||p===''?'Ask for price':'PKR '+Number(p).toLocaleString('en-PK');
+e('chips').innerHTML=[...categories.map(c=>[c.id,c.title]),['size-guide','Size Guide']].map(([i,n])=>`<a href="#${i}" class="chip whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase bg-brand-champagne hover:bg-brand-gold hover:text-white transition-colors">${n}</a>`).join('');
+const card=p=>`<li class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl border border-brand-champagne custom-shadow hover:border-brand-gold/60 transition-all">
+${p.image?`<img src="${p.image}" alt="${p.name}" loading="lazy" class="w-full sm:w-28 h-40 sm:h-28 rounded-lg object-cover flex-shrink-0">`:`<div class="w-full sm:w-28 h-24 sm:h-28 rounded-lg bg-brand-champagne flex items-center justify-center flex-shrink-0"><span class="font-serif text-4xl text-brand-gold italic">SI</span></div>`}
+<div class="flex-1 min-w-0"><div class="flex flex-wrap gap-1.5 mb-2">${(p.badges||[]).map((b,i)=>`<span class="${i?'bg-brand-champagne text-brand-navy':'bg-brand-navy text-brand-gold'} text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded">${b}</span>`).join('')}</div>
+<h3 class="font-serif text-lg font-bold">${p.name}</h3><p class="text-xs text-brand-slate mt-1">${p.desc||''}</p>
+<p class="text-[11px] text-brand-slate mt-2">Code: <strong class="text-brand-navy">${p.id}</strong>${p.time?` · Ready in: <strong class="text-brand-navy">${p.time}</strong>`:''}</p></div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-3 flex-shrink-0"><span class="font-serif text-lg font-bold text-brand-gold">${money(p.price)}</span>
+<a href="${wa(`Hello, I'm interested in ${p.name} (Code: ${p.id})`)}" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-navy text-white text-xs font-semibold hover:bg-brand-gold transition-colors">Order via WhatsApp</a></div></li>`;
+e('sections').innerHTML=categories.map(c=>{const list=products.filter(p=>p.category===c.id);return `<section id="${c.id}" class="scroll-mt-36 py-14 border-b border-brand-champagne last:border-0">
+<span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-bold">Collection</span><h2 class="text-3xl font-serif font-bold mt-1">${c.title}</h2><p class="text-brand-slate text-sm mt-2 mb-6">${c.blurb}</p>
+<ul class="space-y-4">${list.length?list.map(card).join(''):'<li class="text-sm text-brand-slate">New articles coming soon.</li>'}</ul></section>`}).join('');
+
+const g=(a,gsm)=>Math.round(a*0.00064516*gsm/5)*5, x=a=>a.join(' × ')+' in';
+const sel=e('sz'); sel.innerHTML=Object.keys(SIZES).map(k=>`<option>${k}</option>`).join(''); sel.value='Queen';
+function render(){
+  const s=SIZES[sel.value], [fw,fl]=s.flat, [bw,bl]=s.bed, d=s.depth;
+  e('szNote').textContent=`Fits a ${bw} × ${bl} in mattress up to ${d} in deep.`;
+  const areas={'Flat sheet':fw*fl,'Fitted sheet':(bw+2*d)*(bl+2*d),[`Pillowcase (each)`]:2*s.pc[0]*s.pc[1]+s.pc[0]*5,'Duvet cover':2*s.duvet[0]*s.duvet[1]};
+  const row=(a,b,c)=>`<tr class="border-b border-brand-champagne last:border-0"><td class="px-5 py-3 font-medium">${a}</td><td class="px-5 py-3 text-right">${b}</td>${c===undefined?'':`<td class="px-5 py-3 text-right">${c}</td>`}</tr>`;
+  const th=(...h)=>`<thead class="bg-brand-champagne text-xs uppercase tracking-wider text-brand-slate"><tr>${h.map((t,i)=>`<th class="px-5 py-2 ${i?'text-right':'text-left'}">${t}</th>`).join('')}</tr></thead>`;
+  e('dim').innerHTML=th('Piece','Qty','Size')+`<tbody>`+row('Flat sheet',1,x(s.flat))+row('Fitted sheet',1,`${x(s.bed)} + ${d} in pocket`)+row('Pillowcase',s.pillows,x(s.pc))+row('Duvet cover',1,x(s.duvet))+`</tbody>`;
+  const F=Object.keys(GSM);
+  const cells=k=>F.map(f=>`<td class="px-4 py-3 text-right">${g(areas[k],GSM[f])} g</td>`).join('');
+  const rw=k=>`<tr class="border-b border-brand-champagne"><td class="px-4 py-3 font-medium">${k}</td>${cells(k)}</tr>`;
+  const tot=F.map(f=>`<td class="px-4 py-3 text-right font-bold text-brand-gold">${g(areas['Flat sheet']+areas['Fitted sheet']+s.pillows*areas['Pillowcase (each)'],GSM[f])} g</td>`).join('');
+  e('wt').innerHTML=`<thead class="bg-brand-champagne text-xs uppercase tracking-wider text-brand-slate"><tr><th class="px-4 py-2 text-left">Piece</th>${F.map(f=>`<th class="px-4 py-2 text-right">${f}</th>`).join('')}</tr></thead><tbody>`+Object.keys(areas).map(rw).join('')+`<tr class="bg-brand-champagneLight"><td class="px-4 py-3 font-bold">Set total*</td>${tot}</tr></tbody>`;
+  e('wt').insertAdjacentHTML('afterend','');
+}
+sel.addEventListener('change',render); render();
+e('wt').parentElement.insertAdjacentHTML('afterend','<p class="text-[11px] text-brand-slate px-5 pb-4">*Flat + fitted + pillowcases (duvet cover excluded).</p>');
+
+/* highlight the section chip currently in view */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)document.querySelectorAll('.chip').forEach(c=>{const on=c.getAttribute('href')==='#'+en.target.id;c.classList.toggle('bg-brand-navy',on);c.classList.toggle('text-white',on);c.classList.toggle('bg-brand-champagne',!on)})}),{rootMargin:'-30% 0px -60% 0px'});
+document.querySelectorAll('main section, #size-guide').forEach(s=>io.observe(s));
+</script>
+</body></html>
